@@ -14,11 +14,12 @@
       };
 
       shellAliases = { 
-        ll =        "ls -lh";
-        gs =        "git status";
-        tree =      "find . -print | sed -e 's#[^-][^/]*/#| #g' -e 's#| \\([^|]\\)#|--- \\1#'";
-        cls =       "clear";
-        rebuild =   "sudo nixos-rebuild switch --flake --upgrade";
+        ll        = "ls -lh";
+        lg        = "lazygit";
+        gs        = "git status";
+        tree      = "find . -print | sed -e 's#[^-][^/]*/#| #g' -e 's#| \\([^|]\\)#|--- \\1#'";
+        cls       = "clear";
+        rebuild   = "sudo nixos-rebuild switch --flake --upgrade";
         nix-clean = "sudo nix-collect-garbage -d && sudo nix-store --optimise";
       };
     };
@@ -43,37 +44,37 @@
     fastfetch
     lazygit
     helix
-    wl-clipboard 
+    wl-clipboard
     grim
     slurp
     wf-recorder
     kitty
-    waybar 
-    swww 
-    rofi 
-    btop 
+    waybar
+    swww
+    rofi
+    btop
     libnotify
     bluetui
     pwvucontrol
     alsa-utils
-    vivaldi 
-    unzip 
+    vivaldi
+    unzip
     telegram-desktop
     spotify
     cava
     unimatrix
+    feh
     mpv
-    btop 
+    btop
     rose-pine-hyprcursor
     swaynotificationcenter
-    kdePackages.breeze 
+    kdePackages.breeze
     kdePackages.breeze-gtk
     (builtins.getAttr  pkgs.stdenv.hostPlatform.system matugen.packages).default
-    git    
+    git
     bluetui
     SDL2
     clang-tools
-    neovim 
     unzip
     nodejs
     wget
