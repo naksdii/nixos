@@ -1,0 +1,89 @@
+{ pkgs, matugen, ... }:
+
+{
+  programs = {
+    zsh = {
+      enable = true;
+      autosuggestions.enable = true;
+      syntaxHighlighting.enable = true;
+
+      ohMyZsh = { 
+        enable = true;
+        theme = "agnoster";
+        plugins = [ "git" "sudo" "z" ];
+      };
+
+      shellAliases = { 
+        ll =        "ls -lh";
+        gs =        "git status";
+        tree =      "find . -print | sed -e 's#[^-][^/]*/#| #g' -e 's#| \\([^|]\\)#|--- \\1#'";
+        cls =       "clear";
+        rebuild =   "sudo nixos-rebuild switch --flake --upgrade";
+        nix-clean = "sudo nix-collect-garbage -d && sudo nix-store --optimise";
+      };
+    };
+
+    obs-studio = { enable = true; };
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+    };
+
+    hyprland = {
+      enable = true;
+      xwayland.enable = true;
+    };
+ 
+   };
+  
+  xdg.portal = { enable = true; };
+
+  environment.systemPackages = with pkgs; [
+    wl-clipboard 
+    grim
+    slurp
+    wf-recorder
+    kitty
+    waybar 
+    swww 
+    rofi 
+    btop 
+    libnotify
+    jq
+    bluetui
+    pwvucontrol
+    alsa-utils
+    vivaldi 
+    unzip 
+    telegram-desktop
+    spotify
+    cava
+    mpv
+    btop 
+    rose-pine-hyprcursor
+    swaynotificationcenter
+    kdePackages.breeze 
+    kdePackages.breeze-gtk
+    (builtins.getAttr  pkgs.stdenv.hostPlatform.system matugen.packages).default
+    virt-manager
+    virt-viewer
+    qemu
+    gcc
+    git    
+    bluetui
+    SDL2
+    vscode
+    clang        
+    anki
+    obsidian
+  ];
+
+  fonts.packages = with pkgs; [
+    noto-fonts-cjk-sans 
+    nerd-fonts.fira-code
+  ];
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = [ ];
+}

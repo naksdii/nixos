@@ -1,0 +1,32 @@
+{
+  config,
+  ...
+}:
+
+{
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
+  zramSwap= {
+    enable = true;
+    memoryPercent = 60;
+    algorithm = "lz4hcd";
+  }; 
+
+  swapDevices = [ { device = "/dev/nvme0n1p3"; } ];
+  
+  networking = {
+    hostName = "nixos";
+    firewall.enable = false;
+    networkmanager.enable = true;
+  };
+    
+  security={
+    rtkit.enable = true;
+    doas.enable = true;
+  };
+
+  system.stateVersion = "25.11";
+}
