@@ -39,6 +39,7 @@
   xdg.portal = { enable = true; };
 
   environment.systemPackages = with pkgs; [
+    lazygit
     helix
     wl-clipboard 
     grim
@@ -50,7 +51,6 @@
     rofi 
     btop 
     libnotify
-    jq
     bluetui
     pwvucontrol
     alsa-utils

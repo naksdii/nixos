@@ -7,7 +7,7 @@
 {
   boot = {
     loader = {
-      timeout = 5;
+      # timeout = 5;
 
       grub = {
         enable = true;
