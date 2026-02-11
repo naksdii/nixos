@@ -39,6 +39,8 @@
   xdg.portal = { enable = true; };
 
   environment.systemPackages = with pkgs; [
+    lazycli
+    fastfetch
     lazygit
     helix
     wl-clipboard 
