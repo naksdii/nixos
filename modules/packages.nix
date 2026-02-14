@@ -35,12 +35,12 @@
       enable = true;
       xwayland.enable = true;
     };
-  mangohud.enable = true;
-     };
+  };
   
   xdg.portal = { enable = true; };
 
   environment.systemPackages = with pkgs; [
+    mangohud
     lazycli
     fastfetch
     lazygit
