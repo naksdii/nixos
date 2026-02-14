@@ -35,7 +35,8 @@
       enable = true;
       xwayland.enable = true;
     };
-   };
+  mangohud.enable = true;
+     };
   
   xdg.portal = { enable = true; };
 
