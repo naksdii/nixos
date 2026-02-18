@@ -29,7 +29,7 @@
     geoclue2.enable = false;
     packagekit.enable = false;
     xserver.videoDrivers = ["intel"];
-
+    chrony.enable = true;
 
   };
 }
