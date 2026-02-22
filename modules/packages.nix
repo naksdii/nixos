@@ -41,8 +41,8 @@
 
   environment.systemPackages = with pkgs; [
     owofetch
-    kdeṔackages.okular
-    gimp
+    kdePackages.okular    
+gimp
     vscode
     fastfetch
     lazygit
