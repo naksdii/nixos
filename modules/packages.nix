@@ -40,8 +40,9 @@
   xdg.portal = { enable = true; };
 
   environment.systemPackages = with pkgs; [
-    mangohud
-    lazycli
+    owofetch
+    gimp
+    vscode
     fastfetch
     lazygit
     helix
