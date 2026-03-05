@@ -21,7 +21,10 @@
         cls       = "clear";
         rebuild   = "sudo nixos-rebuild switch --flake --upgrade";
         nix-clean = "sudo nix-collect-garbage -d && sudo nix-store --optimise";
-      };
+        r         = "sudo reboot";
+        f         = "fastfetch";
+        s         = "shuf";
+        y         = "yes";     };
     };
 
     obs-studio = { enable = true; };
@@ -37,12 +40,18 @@
     };
   };
   
-  xdg.portal = { enable = true; };
+  xdg.portal = { enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-gtk
+    ];
+  };
 
   environment.systemPackages = with pkgs; [
     owofetch
     kdePackages.okular    
     gimp
+    sqlite
     sqlite.dev
     vscode
     fastfetch
