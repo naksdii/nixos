@@ -1,6 +1,11 @@
 { pkgs, matugen, ... }:
 
 {
+  environment.sessionVariables = {
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_SESSION_TYPE = "wayland";
+    XDG_SESSION_DESKTOP = "Hyprland";
+  };
   programs = {
     zsh = {
       enable = true;
@@ -27,7 +32,14 @@
         y         = "yes";     };
     };
 
-    obs-studio = { enable = true; };
+obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-vaapi
+      obs-pipewire-audio-capture
+    ];
+  };
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
@@ -45,10 +57,12 @@
       pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gtk
     ];
+    config.common.default = "hyprland";
   };
 
   environment.systemPackages = with pkgs; [
     owofetch
+    easyeffects
     kdePackages.okular    
     gimp
     sqlite
