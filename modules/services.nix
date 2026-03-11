@@ -9,12 +9,42 @@
   services = {
     pipewire = {
       enable = true;
-      audio.enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
-      wireplumber.enable = true;
-    };
+
+wireplumber.extraConfig = {
+        "10-fix-easyeffects" = {
+          "wireplumber.settings" = {
+            "device.routes.default-sink-priority" = 2000;
+          };
+          # Alterado de monitor.alsa.rules para monitor.libpipewire-links ou regras genéricas
+          "monitor.pipewire.rules" = [
+            {
+              matches = [ { "node.name" = "~easyeffects_sink"; } ];
+              actions = {
+                update-props = {
+                  "priority.driver" = 2000;
+                  "priority.session" = 2000;
+                  "node.passive" = false;
+                  "session.suspend-on-idle" = false;
+                };
+              };
+            }
+            {
+              matches = [ { "node.name" = "~easyeffects_source"; } ];
+              actions = {
+                update-props = {
+                  "priority.driver" = 2000;
+                  "priority.session" = 2000;
+                  "node.passive" = false;
+                };
+              };
+            }
+          ];
+        };
+      };  
+};
 
     flatpak.enable = true;
 

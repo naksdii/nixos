@@ -65,6 +65,7 @@ obs-studio = {
     easyeffects
     kdePackages.okular    
     gimp
+    protonup-qt
     sqlite
     sqlite.dev
     vscode
