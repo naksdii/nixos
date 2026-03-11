@@ -61,6 +61,7 @@ obs-studio = {
   };
 
   environment.systemPackages = with pkgs; [
+    jdk21
     owofetch
     easyeffects
     kdePackages.okular    
