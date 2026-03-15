@@ -11,7 +11,6 @@
       enable = true;
       autosuggestions.enable = true;
       syntaxHighlighting.enable = true;
-
       ohMyZsh = { 
         enable = true;
         theme = "agnoster";
@@ -63,6 +62,7 @@ obs-studio = {
   environment.systemPackages = with pkgs; [
     jdk21
     owofetch
+    anki
     easyeffects
     kdePackages.okular    
     gimp
@@ -116,7 +116,11 @@ obs-studio = {
     noto-fonts-cjk-sans 
     nerd-fonts.fira-code
   ];
-
+environment.variables = {
+  GTK_IM_MODULE = "fcitx";
+  QT_IM_MODULE  = "fcitx";
+  XMODIFIERS    = "@im=fcitx";
+};
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = [ ];
 }
