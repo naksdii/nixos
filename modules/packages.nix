@@ -28,7 +28,10 @@
         r         = "sudo reboot";
         f         = "fastfetch";
         s         = "shuf";
-        y         = "yes";     };
+        y         = "yes";
+        clock     = "tty-clock";
+        pps       = "pipes.sh"
+            };
     };
 
 obs-studio = {
