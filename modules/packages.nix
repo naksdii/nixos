@@ -91,6 +91,8 @@ obs-studio = {
     unzip
     telegram-desktop
     spotify
+    pipes
+    tty-clock
     cava
     unimatrix
     feh
