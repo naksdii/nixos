@@ -30,7 +30,7 @@
         s         = "shuf";
         y         = "yes";
         clock     = "tty-clock";
-        pps       = "pipes.sh"
+        pps       = "pipes.sh";
             };
     };
 
@@ -63,9 +63,20 @@ obs-studio = {
   };
 
   environment.systemPackages = with pkgs; [
+    dorion
+    hyprpicker
+    tmux
+    niri
+    wl-gammarelay-rs
+    xwayland-satellite
+    hyfetch
+    ncurses
+    zerotierone
     jdk21
     openssh
     owofetch
+    ffmpeg
+    imagemagick
     anki
     easyeffects
     kdePackages.okular    
@@ -116,6 +127,9 @@ obs-studio = {
     curl
     gcc
     gnumake
+  papirus-icon-theme
+  adwaita-icon-theme
+  hicolor-icon-theme
   ];
 
   fonts.packages = with pkgs; [

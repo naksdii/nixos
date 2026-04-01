@@ -21,8 +21,7 @@
     hostName = "nixos";
     firewall.enable = false;
     networkmanager.enable = true;
-  };
-    
+  };   
   security={
     rtkit.enable = true;
     doas.enable = true;

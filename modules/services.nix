@@ -7,12 +7,12 @@
   hardware.pulseaudio.enable = false;
 
   services = {
-    pipewire = {
+   zerotierone.enable = true;
+   pipewire = {
       enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
-
 wireplumber.extraConfig = {
         "10-fix-easyeffects" = {
           "wireplumber.settings" = {
@@ -38,6 +38,7 @@ wireplumber.extraConfig = {
                   "priority.driver" = 2000;
                   "priority.session" = 2000;
                   "node.passive" = false;
+              
                 };
               };
             }

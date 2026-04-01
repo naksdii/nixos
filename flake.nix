@@ -3,6 +3,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     matugen.url = "github:InioX/Matugen";
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
+    yt-x = {
+    url = "github:Benexl/yt-x";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
   };
 
   outputs = {
