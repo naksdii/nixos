@@ -63,8 +63,9 @@ obs-studio = {
   };
 
   environment.systemPackages = with pkgs; [
-    dorion
-    hyprpicker
+    cowsay
+    jq
+    imagemagick
     tmux
     niri
     wl-gammarelay-rs
