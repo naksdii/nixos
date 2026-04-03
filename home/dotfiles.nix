@@ -24,7 +24,7 @@
     #rofi#
     ######
     "rofi/config.rasi".source = ./dotfiles/rofi/config.rasi;
-    "rofi/themes/round.rasi".source = ./dotfiles/rofi/themes/config.rasi;
+    "rofi/themes/round.rasi".source = ./dotfiles/rofi/themes/round.rasi;
 
 
     ########################
