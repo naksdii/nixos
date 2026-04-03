@@ -40,6 +40,7 @@ obs-studio = {
       wlrobs
       obs-vaapi
       obs-pipewire-audio-capture
+      droidcam-obs
     ];
   };
     steam = {
@@ -63,7 +64,7 @@ obs-studio = {
   };
 
   environment.systemPackages = with pkgs; [
-    cowsay
+    droidcam    cowsay
     jq
     imagemagick
     tmux
