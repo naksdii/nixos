@@ -1,0 +1,18 @@
+# Resultados de builds (links simbólicos)
+result
+result-*
+
+# Arquivos temporários e de swap do editor
+*.swp
+*~
+.DS_Store
+
+# Segredos (NÃO envie suas chaves privadas!)
+*.pem
+*.key
+id_rsa
+secrets.nix
+.env
+
+# Se você usa sops-nix ou agenix (ignore as chaves de decodificação)
+keys.txt
