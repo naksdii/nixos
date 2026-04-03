@@ -13,6 +13,6 @@ result-*
 id_rsa
 secrets.nix
 .env
-
+*.save
 # Se você usa sops-nix ou agenix (ignore as chaves de decodificação)
 keys.txt
