@@ -12,7 +12,6 @@
     username = "naksdii";
     homeDirectory = "/home/naksdii";
     stateVersion = "25.11";
-
     sessionVariables = {
       XDG_CURRENT_DESKTOP = "Hyprland";
       XDG_SESSION_TYPE = "wayland";

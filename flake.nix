@@ -41,7 +41,6 @@
             # ./modules/hardware.nix
             ./modules/os-config.nix
             # ./modules/users.nix
-
             home-manager.nixosModules.home-manager
             {
               home-manager = {
