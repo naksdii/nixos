@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  zsh = {
+  programs.zsh = {
     enable = true;
     autosuggestion.enable = true; # Nome corrigido conforme o aviso do rebuild
     syntaxHighlighting.enable = true;
