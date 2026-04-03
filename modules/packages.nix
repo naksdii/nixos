@@ -1,4 +1,9 @@
-{ pkgs, matugen, ... }:
+{
+  inputs,
+  pkgs,
+  matugen,
+  ...
+}:
 
 {
   environment.sessionVariables = {
@@ -11,38 +16,42 @@
       enable = true;
       autosuggestions.enable = true;
       syntaxHighlighting.enable = true;
-      ohMyZsh = { 
+      ohMyZsh = {
         enable = true;
         theme = "agnoster";
-        plugins = [ "git" "sudo" "z" ];
+        plugins = [
+          "git"
+          "sudo"
+          "z"
+        ];
       };
 
-      shellAliases = { 
-        ll        = "ls -lh";
-        lg        = "lazygit";
-        gs        = "git status";
-        tree      = "find . -print | sed -e 's#[^-][^/]*/#| #g' -e 's#| \\([^|]\\)#|--- \\1#'";
-        cls       = "clear";
-        rebuild   = "sudo nixos-rebuild switch --flake --upgrade";
+      shellAliases = {
+        ll = "ls -lh";
+        lg = "lazygit";
+        gs = "git status";
+        tree = "find . -print | sed -e 's#[^-][^/]*/#| #g' -e 's#| \\([^|]\\)#|--- \\1#'";
+        cls = "clear";
+        rebuild = "sudo nixos-rebuild switch --flake --upgrade";
         nix-clean = "sudo nix-collect-garbage -d && sudo nix-store --optimise";
-        r         = "sudo reboot";
-        f         = "fastfetch";
-        s         = "shuf";
-        y         = "yes";
-        clock     = "tty-clock";
-        pps       = "pipes.sh";
-            };
+        r = "sudo reboot";
+        f = "fastfetch";
+        s = "shuf";
+        y = "yes";
+        clock = "tty-clock";
+        pps = "pipes.sh";
+      };
     };
 
-obs-studio = {
-    enable = true;
-    plugins = with pkgs.obs-studio-plugins; [
-      wlrobs
-      obs-vaapi
-      obs-pipewire-audio-capture
-      droidcam-obs
-    ];
-  };
+    obs-studio = {
+      enable = true;
+      plugins = with pkgs.obs-studio-plugins; [
+        wlrobs
+        obs-vaapi
+        obs-pipewire-audio-capture
+        droidcam-obs
+      ];
+    };
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
@@ -54,8 +63,9 @@ obs-studio = {
       xwayland.enable = true;
     };
   };
-  
-  xdg.portal = { enable = true;
+
+  xdg.portal = {
+    enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gtk
@@ -64,9 +74,11 @@ obs-studio = {
   };
 
   environment.systemPackages = with pkgs; [
-    droidcam    cowsay
+    home-manager
+    droidcam
+    cowsay
     libclang
-        jq
+    jq
     imagemagick
     tmux
     niri
@@ -82,7 +94,7 @@ obs-studio = {
     imagemagick
     anki
     easyeffects
-    kdePackages.okular    
+    kdePackages.okular
     gimp
     protonup-qt
     sqlite
@@ -119,7 +131,7 @@ obs-studio = {
     swaynotificationcenter
     kdePackages.breeze
     kdePackages.breeze-gtk
-    (builtins.getAttr  pkgs.stdenv.hostPlatform.system matugen.packages).default
+    (builtins.getAttr pkgs.stdenv.hostPlatform.system matugen.packages).default
     git
     bluetui
     SDL2
@@ -130,20 +142,20 @@ obs-studio = {
     curl
     gcc
     gnumake
-  papirus-icon-theme
-  adwaita-icon-theme
-  hicolor-icon-theme
+    papirus-icon-theme
+    adwaita-icon-theme
+    hicolor-icon-theme
   ];
 
   fonts.packages = with pkgs; [
-    noto-fonts-cjk-sans 
+    noto-fonts-cjk-sans
     nerd-fonts.fira-code
   ];
-environment.variables = {
-  GTK_IM_MODULE = "fcitx";
-  QT_IM_MODULE  = "fcitx";
-  XMODIFIERS    = "@im=fcitx";
-};
+  environment.variables = {
+    GTK_IM_MODULE = "fcitx";
+    QT_IM_MODULE = "fcitx";
+    XMODIFIERS = "@im=fcitx";
+  };
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = [ ];
 }

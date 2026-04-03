@@ -1,4 +1,5 @@
 {
+  inputs,
   ...
 }:
 
@@ -7,13 +8,13 @@
   hardware.pulseaudio.enable = false;
 
   services = {
-   zerotierone.enable = true;
-   pipewire = {
+    zerotierone.enable = true;
+    pipewire = {
       enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
-wireplumber.extraConfig = {
+      wireplumber.extraConfig = {
         "10-fix-easyeffects" = {
           "wireplumber.settings" = {
             "device.routes.default-sink-priority" = 2000;
@@ -38,14 +39,14 @@ wireplumber.extraConfig = {
                   "priority.driver" = 2000;
                   "priority.session" = 2000;
                   "node.passive" = false;
-              
+
                 };
               };
             }
           ];
         };
-      };  
-};
+      };
+    };
 
     flatpak.enable = true;
 
@@ -59,7 +60,7 @@ wireplumber.extraConfig = {
     avahi.enable = false;
     geoclue2.enable = false;
     packagekit.enable = false;
-    xserver.videoDrivers = ["intel"];
+    xserver.videoDrivers = [ "intel" ];
     chrony.enable = true;
 
   };

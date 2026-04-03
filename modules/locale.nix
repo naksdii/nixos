@@ -1,4 +1,5 @@
 {
+  inputs,
   pkgs,
   ...
 }:
@@ -19,14 +20,14 @@
       LC_TELEPHONE = "pt_BR.UTF-8";
       LC_TIME = "pt_BR.UTF-8";
     };
-inputMethod = {
-  enabled = "fcitx5";
-  fcitx5.addons = with pkgs; [
-    fcitx5-mozc
-    fcitx5-gtk
-  ];};};
+    inputMethod = {
+      enabled = "fcitx5";
+      fcitx5.addons = with pkgs; [
+        fcitx5-mozc
+        fcitx5-gtk
+      ];
+    };
+  };
   console.keyMap = "br-abnt2";
 
 }
-
-

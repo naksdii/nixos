@@ -1,20 +1,22 @@
 {
   "nodes": {
-    "flake-utils": {
+    "home-manager": {
       "inputs": {
-        "systems": "systems_2"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
-        "lastModified": 1731533236,
-        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "lastModified": 1775223910,
+        "narHash": "sha256-QRdehpSKTttlZe0oY2n5OCfZeCMrHkKNlWF1LJzO9tY=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "f68887a4c11e662b0eb0323d34b3fb9506226719",
         "type": "github"
       },
       "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
+        "owner": "nix-community",
+        "repo": "home-manager",
         "type": "github"
       }
     },
@@ -105,10 +107,10 @@
     },
     "root": {
       "inputs": {
+        "home-manager": "home-manager",
         "matugen": "matugen",
         "nixos-grub-themes": "nixos-grub-themes",
-        "nixpkgs": "nixpkgs_3",
-        "yt-x": "yt-x"
+        "nixpkgs": "nixpkgs_3"
       }
     },
     "systems": {
@@ -123,42 +125,6 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default-linux",
-        "type": "github"
-      }
-    },
-    "systems_2": {
-      "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
-      }
-    },
-    "yt-x": {
-      "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1774258562,
-        "narHash": "sha256-HDtPiUwAQ8Ras5KTwU/1oiENQ/t93op4fFNqNg6biRM=",
-        "owner": "Benexl",
-        "repo": "yt-x",
-        "rev": "4880033ecb57cccfcf865cc915cc9f9f6c887741",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Benexl",
-        "repo": "yt-x",
         "type": "github"
       }
     }
