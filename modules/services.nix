@@ -5,10 +5,9 @@
 
 {
 
-  hardware.pulseaudio.enable = false;
-
   services = {
     zerotierone.enable = true;
+    pulseaudio.enable = false;
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -62,6 +61,6 @@
     packagekit.enable = false;
     xserver.videoDrivers = [ "intel" ];
     chrony.enable = true;
-
+    openssh.enable = true;
   };
 }

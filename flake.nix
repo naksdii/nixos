@@ -38,17 +38,18 @@
             ./modules/services.nix
             ./modules/boot.nix
             ./modules/packages.nix
-            ./modules/hardware.nix
+            # ./modules/hardware.nix
             ./modules/os-config.nix
-            ./modules/users.nix
+            # ./modules/users.nix
 
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.naksdii = import /home/naksdii/nixos/home.nix;
-
-              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.naksdii = import ./home.nix;
+                extraSpecialArgs = { inherit inputs; };
+              };
             }
           ];
         };
