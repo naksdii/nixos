@@ -6,7 +6,6 @@
     ./home/zsh.nix
     ./home/obs.nix
     ./home/git.nix
-    ./home/dotfiles.nix
   ];
   home = {
     username = "naksdii";
