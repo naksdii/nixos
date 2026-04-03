@@ -65,7 +65,8 @@ obs-studio = {
 
   environment.systemPackages = with pkgs; [
     droidcam    cowsay
-    jq
+    libclang
+        jq
     imagemagick
     tmux
     niri
