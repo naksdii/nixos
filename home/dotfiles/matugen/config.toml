@@ -1,0 +1,44 @@
+[config]
+# Se quiser mudar o comportamento padrão (ex: dark/light), pode adicionar aqui.
+
+[templates.kitty]
+input_path = '/home/naksdii/.config/matugen/templates/kitty-colors.conf'
+output_path = '/home/naksdii/.config/kitty/colors.conf'
+post_hook = 'pkill -SIGUSR1 kitty'
+
+[templates.hyprland]
+input_path = '/home/naksdii/.config/matugen/templates/hyprland.conf'
+output_path = '/home/naksdii/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload'
+
+[templates.waybar]
+input_path = '/home/naksdii/.config/matugen/templates/colors.css'
+output_path = '/home/naksdii/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.swaync]
+input_path = '/home/naksdii/.config/matugen/templates/colors.css'
+output_path = '/home/naksdii/.config/swaync/colors.css'
+post_hook = 'swaync-client -rs'
+
+[templates.rofi]
+input_path = '/home/naksdii/.config/matugen/templates/rofi-colors.rasi'
+output_path = '/home/naksdii/.config/rofi/themes/colors.rasi'
+
+[templates.helix]
+input_path = '/home/naksdii/.config/matugen/templates/helix.toml'
+output_path = '/home/naksdii/.config/helix/themes/matugen.toml'
+
+[templates.btop]
+input_path = '/home/naksdii/.config/matugen/templates/btop.theme'
+output_path = '/home/naksdii/.config/btop/themes/matugen.theme'
+
+[templates.cava]
+input_path = '/home/naksdii/.config/matugen/templates/cava-color.ini'
+output_path = '/home/naksdii/.config/cava/themes/theme'
+post_hook = 'pkill -USR1 cava'
+
+[templates.dunst]
+input_path = '/home/naksdii/.config/matugen/templates/dunstrc-colors'
+output_path = '/home/naksdii/.config/dunst/dunstrc.d/colors.conf'
+post_hook = 'pkill dunst; dunst &'

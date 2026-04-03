@@ -1,0 +1,61 @@
+@import "colors.css";
+* {
+    font-family: CaskaydiaMono Nerd Font;
+    font-size: 17px;
+    background: rgba(1,1,1,0);
+}
+
+.modules-left {
+    padding: 7px;
+    margin: 10 10 0 0;
+    border-radius: 10px;
+    background: alpha(@background, 0.8);
+}
+
+.modules-center {
+    padding: 7px 0px;
+    margin: 0 10 0 0;
+    border-radius: 10px;
+    background: alpha(@background, 0.8);
+}
+
+.modules-right {
+    padding: 7px 0px;
+    margin: 0 10 10 0;
+    border-radius: 10px;
+    background: alpha(@background, 0.8);
+}
+
+#workspaces {
+    padding: 5px 0px;
+}
+#workspaces button {
+    all: unset;
+    padding: 5px 0px;
+    color: alpha(@primary, 0.25);
+    transition: all 0.2s ease;
+}
+#workspaces button.active {
+    color: @primary;
+    border: none;
+}
+#workspaces button.empty {
+    color: alpha(@primary, 0.25);
+    border: none;
+}
+
+#workspaces button.active.empty {
+    color: @primary;
+    border: none;
+}
+
+#custom-notification,
+#network,
+#pulseaudio,
+#clock,
+#cpu {
+    all: unset;
+    padding: 5px 4px;
+    color: alpha(@primary, 0.9);
+    transition: all 0.2s ease;
+}

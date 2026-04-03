@@ -1,0 +1,27 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    terminal: "kitty";
+    font: "monospace 12";       /* fonte do Rofi */
+    location: 1;                /* 0: topo, 1: ceno, 2: inferior */
+    width: 50;                  /* largura em % da tela */
+    lines: 10;                  /* número de linhas visíveis */
+    columns: 1;                 /* colunas */
+    sidebar-mode: false;
+    hide-scrollbar: true;
+    padding: 5;
+    border-radius: 5;
+    opacity: 95;
+    element-padding: 3;
+    show-match: true;
+    case-sensitive: false;
+    scrollbar-width: 8;
+    no-custom: false;
+    show-icons: true;
+    icon-theme: "Papirus";    
+    location: 0;
+}
+
+//@theme "/home/naksdii/.config/rofi/themes/round.rasi"
+
+@theme "/home/naksdii/.config/rofi/themes/round.rasi"

@@ -1,0 +1,73 @@
+/* Importa o arquivo de cores para que as variáveis fiquem disponíveis */
+@import url("colors.css");
+
+:root {
+  --border-radius: 17px;
+  --cc-bg: @surface; /* Usando a cor de superfície do seu tema */
+
+  --widget-background: @surface; /* Fundo dos widgets mais visível */
+  --noti-bg-alpha: 0.8;
+
+  --padding: calc(var(--border-radius) / 2);
+  --border: 1px solid @outline_variant; /* Define a borda usando o tema */
+}
+
+.control-center {
+  border-radius:var(--border-radius);
+  background: transparent; /* Cor de fundo principal */
+  color: @on_surface;    /* Cor do texto */
+}
+
+.widgets > .widget,
+.widget-mpris > carouselindicatordots,
+.widget-mpris > box > button {
+  background: @surface;
+  border-radius:var(--border-radius);
+  padding: calc(var(--border-radius) / 2);
+  border: var(--border);
+  color: @on_surface;
+}
+
+.control-center-list-placeholder {
+  padding: var(--border-radius);
+  color: @on_surface_variant;
+}
+
+.notification-group {
+  border-radius: var(--border-radius);
+  padding: 8px;
+  background: @surface;
+}
+
+.widget.widget-mpris {
+  background: transparent;
+  border-radius: var(--border-radius);
+  padding: 0;
+  border: none;
+}
+
+.widget.widget-mpris > carouselindicatordots {
+  --dots-padding: 4px;
+  padding: var(--dots-padding);
+  padding-left: var(--dots-padding);
+  padding-right: calc(6px + var(--dots-padding));
+  margin: 0;
+  margin-top: calc(var(--padding)+10);
+}
+
+/* Hover do botão de música usando a cor primária do tema */
+.widget-mpris > box > button:hover {
+  background: @primary;
+  color: @on_primary_container;
+}
+
+.widget-mpris-player {
+  box-shadow: none;
+  border: var(--border);
+  margin: 0 var(--padding);
+  background: @surface_container_highest;
+}
+
+.widget-mpris-player:only-child {
+  margin: 0;
+}

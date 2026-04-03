@@ -1,0 +1,92 @@
+/* ROUNDED THEME FOR ROFI */
+/* Author: Newman Sanchez (https://github.com/newmanls) */
+
+@import "./colors.rasi"
+* {
+    font:   "Roboto 12";
+
+    background-color:   transparent;
+    text-color:         @fg0;
+
+    margin:     0px;
+    padding:    0px;
+    spacing:    0px;
+}
+
+window {
+    location:       north;
+    y-offset:       calc(50% - 176px);
+    width:          480;
+    border:2px;
+    border-radius:  24px;
+    border-color:   @outline;
+    background-color:   @on-secondary-fixed;
+}
+
+mainbox {
+    padding:    12px;
+}
+
+inputbar {
+    background-color:   @on-secondary;
+    border-color:       @outline-variant;
+
+    border:         2px;
+    border-radius:  16px;
+
+    padding:    8px 16px;
+    spacing:    8px;
+    children:   [ prompt, entry ];
+}
+
+prompt {
+    text-color: @on-surface;
+}
+
+entry {
+    placeholder:        "Search";
+    placeholder-color:  @on-surface-variant;
+}
+
+message {
+    margin:             12px 0 0;
+    border-radius:      16px;
+    background-color:   @error-container;
+    text-color:         @on-error-container;
+}
+
+textbox {
+    padding:    8px 24px;
+}
+
+listview {
+    background-color:   @primary-container;
+    border-radius:  16px;
+    margin:     12px 0 0;
+    lines:      16;
+    columns:    1;
+
+    fixed-height: false;
+}
+
+element {
+    padding:        8px 16px;
+    spacing:        8px;
+    border-radius:  16px;
+    background-color:   @primary-container;
+    text-color:         @on-primary-container;
+}
+
+element selected normal, element selected active
+{
+    background-color:   @primary;
+    text-color:         @on-primary;
+}
+element-icon {
+    size:           1em;
+    vertical-align: 0.5;
+}
+
+element-text {
+    text-color: inherit;
+}
