@@ -32,6 +32,7 @@
     vscode
     gimp
     anki
+    discord
     kdePackages.okular
     easyeffects
     git

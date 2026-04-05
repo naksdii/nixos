@@ -37,8 +37,3 @@ output_path = '/home/naksdii/.config/btop/themes/matugen.theme'
 input_path = '/home/naksdii/.config/matugen/templates/cava-color.ini'
 output_path = '/home/naksdii/.config/cava/themes/theme'
 post_hook = 'pkill -USR1 cava'
-
-[templates.dunst]
-input_path = '/home/naksdii/.config/matugen/templates/dunstrc-colors'
-output_path = '/home/naksdii/.config/dunst/dunstrc.d/colors.conf'
-post_hook = 'pkill dunst; dunst &'
